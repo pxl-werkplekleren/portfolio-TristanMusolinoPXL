@@ -1,0 +1,227 @@
+:root {
+    --blauw: #004685;
+    --lichtblauw: #e3f2fd;
+    --accent-kleur: #00a1e1;
+    --tekst-kleur: #333;
+    --achtergrond: #f4f7f9;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--tekst-kleur);
+    margin: 0;
+    padding: 0;
+    background-color: var(--achtergrond);
+}
+
+header {
+    background-color: var(--blauw);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.avatar-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-avatar:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-kleur);
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+section {
+    scroll-margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+h1, h2, h3, h4 {
+    color: var(--blauw);
+}
+
+h1 {
+    border-bottom: 3px solid var(--accent-kleur);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+th {
+    background-color: var(--lichtblauw);
+    color: var(--blauw);
+}
+
+.holiday {
+    background-color: #fff9c4 !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+.role-header {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.xfactor-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.xfactor-item, .activiteiten-blok, .opdracht-item, .situering-blok {
+    background: var(--lichtblauw);
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 5px solid var(--blauw);
+    margin-bottom: 20px;
+}
+
+.xfactor-item h4 {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.xfactor-item p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+footer {
+    background-color: var(--blauw);
+    color: #ffffff;
+    padding: 15px 0;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+}
+
+.footer-center {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.back-to-top {
+    background-color: white;
+    color: var(--blauw);
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.back-to-top:hover {
+    background-color: #f2f2f2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 900px) {
+    .xfactor-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .xfactor-container { grid-template-columns: 1fr; }
+    .header-container, .footer-container { flex-direction: column; text-align: center; gap: 10px; }
+    nav ul li { margin: 0 10px; }
+}
