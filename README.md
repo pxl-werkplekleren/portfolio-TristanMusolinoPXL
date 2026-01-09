@@ -21,7 +21,7 @@ Dit portfolio is gebouwd als een single-page applicatie (SPA) met een focus op e
 
 ## Gebruikte Technologieën
 * **HTML:** Voor de structurele opbouw van de content.
-* **CSS:** Voor de styling, inclusief een responsive grid-layout en PXL-branding.
+* **CSS:** Voor de styling, inclusief een responsive grid-layout en branding.
 * **Flexbox & CSS Grid:** Voor de positionering van elementen en de X-factor blokken.
 * **Git/GitHub:** Voor versiebeheer en hosting.
 
