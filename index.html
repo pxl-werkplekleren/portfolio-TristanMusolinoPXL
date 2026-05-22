@@ -21,6 +21,7 @@
                 <li><a href="#logboek">Logboek</a></li>
                 <li><a href="#ontwikkeling">Ontwikkeling</a></li>
                 <li><a href="#opdrachten">Opdrachten</a></li>
+                <li><a href="#teamproject">WPL2</a></li>
                 <li><a href="#reflectie">Reflectie</a></li>
             </ul>
         </nav>
@@ -36,6 +37,9 @@
             </p>
             <p>
                 Daarnaast documenteer ik hier mijn projecten, zoals mijn eerste stappen in C#, HTML/CSS en SQL. In het onderdeel reflectie blik ik terug op mijn successen en de uitdagingen waar ik tijdens dit eerste semester tegenaan ben gelopen. Ik nodig je uit om door mijn leerproces te bladeren en te zien hoe ik mijn passie voor technologie omzet in concrete vaardigheden. Dit portfolio zal gedurende mijn hele opleiding blijven groeien als een levend document van mijn professionele ontwikkeling.
+            </p>
+            <p>
+                <strong>Onderscheid WPL1 en WPL2:</strong> De secties Logboek, Ontwikkeling, Opdrachten en Reflectie beschrijven mijn traject tijdens <strong>Werkplekleren 1</strong>. Mijn werk voor <strong>Werkplekleren 2</strong> — het teamproject ImmoHabits — vind je gebundeld in de aparte sectie <a href="#teamproject">WPL2</a>.
             </p>
         </div>
     </section>
@@ -512,6 +516,31 @@
             <p><strong>Leerervaring:</strong> Dit was mijn eerste ervaring met langdurige projecten. Ik ben trots op het resultaat van mijn CV en portfolio, waarin ik mijn achtergrond in design kon combineren met mijn nieuwe programmeerskills.</p>
         </article>
     </section>
+
+    <section id="teamproject">
+        <h1>Werkplekleren 2 — Teamproject ImmoHabits</h1>
+        <p>Deze sectie bundelt mijn werk voor <strong>Werkplekleren 2</strong>. De voorgaande secties (Logboek, Ontwikkeling, Opdrachten en Reflectie) horen bij Werkplekleren 1. Tijdens WPL2 werkte ik in een team van zeven studenten (Team 09) aan het project ImmoHabits.</p>
+
+        <h3>Beschrijving van de case</h3>
+        <div class="opdracht-item">
+            <p>ImmoHabits is een SaaS-platform dat ons team van zeven studenten tijdens Werkplekleren 2 ontwikkelde voor vastgoedprofessionals. Het centrale idee is eenvoudig: een makelaar maakt foto's van een pand en het platform genereert daaruit automatisch een digitale plaatsbeschrijving — het officiële document dat de staat van een woning vastlegt bij een huur- of verkoopovereenkomst. Wat normaal een tijdrovende, manuele taak is, wordt zo grotendeels geautomatiseerd.</p>
+            <p>Het project bestond uit twee aparte repositories. De backend is een .NET-oplossing die volgens een clean-architecturestructuur is opgebouwd, met afzonderlijke lagen voor Domain, Application, Infrastructure en een ASP.NET Web API, aangevuld met een WPF-beheertool en NUnit-tests. De gegevens worden bewaard in een SQL Server-databank. De frontend is een Single Page Application in Vue 3 die via de Web API met de backend communiceert.</p>
+            <p>De applicatie kent drie gebruikersomgevingen binnen één codebase. De publieke website is de marketingomgeving voor bezoekers. Het klantenportaal is de afgeschermde omgeving waar ingelogde klanten hun panden, foto's en bestellingen beheren en hun profiel kunnen aanpassen. Het admin-dashboard geeft beheerders ten slotte een overzicht van alle gebruikers, panden en bestellingen, met filter- en bewerkfuncties en statistieken in grafiekvorm.</p>
+            <p>Het platform werkt met een tokensysteem: klanten kopen tokens en verbruiken die per gegenereerde plaatsbeschrijving. Zo combineert ImmoHabits een herkenbaar verdienmodel met een concrete meerwaarde voor de eindgebruiker. Voor ons team was het de eerste keer dat we een volledige applicatie bouwden waarin frontend, backend en databank als één samenhangend geheel functioneren.</p>
+        </div>
+
+        <h3>Mijn aandeel</h3>
+        <div class="opdracht-item">
+            <p>Binnen het team werkte ik zowel aan de backend als aan de frontend, met als rode draad het gebruikersbeheer.</p>
+            <p>Aan de <strong>backend</strong> nam ik het volledige gebruikersbeheer voor mijn rekening. Ik werkte de UserController uit met de API-endpoints, de UserService met de bijhorende businesslogica en de UserRepository met de SQL-queries om gebruikers te registreren, op te halen en bij te werken. Daarnaast ontwierp ik de domeinklasse User en de DTO's voor registratie en het updaten van gebruikers. In de WPF-beheertool bouwde ik een detailvenster dat alle gegevens van een gebruiker toont, met een verwijderknop. Ik werkte ook mee aan de OrderController en aan een City-feature waarbij postcodes en gemeentes hardcoded in de databank staan, zodat er geen fictieve waarden meer kunnen worden ingevoerd. Tot slot schreef ik NUnit-tests om de databaseconnectie te controleren.</p>
+            <p>Aan de <strong>frontend</strong> werkte ik mee aan de centrale API-servicelaag, die alle HTTP-calls naar de backend op één plek bundelt met consistente foutafhandeling. Ik bouwde mee aan het klantenportaal, waaronder de accountpagina waar een gebruiker zijn profiel kan bekijken en bewerken. Verder werkte ik de registratie- en loginkaarten af en koppelde ik de authenticatie aan de Pinia-store en de router-guards. In het admin-dashboard breidde ik de klantenpagina uit met filteren op rol en locatie en met het bewerken van gebruikers. Ook verzorgde ik de datavisualisatie met grafieken via Chart.js en ontwikkelde ik mee aan de productenpagina en de stad-zoekfunctie.</p>
+            <p>We werkten samen met Git en GitHub via aparte feature-branches en pull requests. Over beide repositories heen leverde ik in totaal 137 commits aan het project.</p>
+        </div>
+
+        <h3>Individuele eindreflectie</h3>
+        <p>Mijn volledige individuele eindreflectie op Werkplekleren 2 is beschikbaar als pdf-document: <a href="documents/WPL2_Musolino_Tristan.pdf" target="_blank">Eindreflectie WPL2 (PDF)</a>.</p>
+    </section>
+
     <section id="reflectie">
         <h1>4.5 Reflectie</h1>
 
